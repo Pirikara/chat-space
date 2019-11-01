@@ -1,0 +1,34 @@
+
+@import 'variable';
+
+.chat-side{
+  width: 300px;
+  color: $font_color;
+  float: left;
+  height: 100%;
+}
+
+.side-header{
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    ul{
+    display: flex;
+    list-style: none;
+    li{
+      margin-left: 0.3rem;
+      a{
+        color: $font_color;
+        text-decoration: none;
+      }
+    }
+    }
+  }
+}

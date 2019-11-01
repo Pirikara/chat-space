@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+@import 'reset';
+@import 'font-awesome';
+@import 'side-header';
+@import 'side-groups';
+@import 'main-header';
+@import 'chat-messages';
+@import 'form';
+@import 'templete';
+@import 'variable';
