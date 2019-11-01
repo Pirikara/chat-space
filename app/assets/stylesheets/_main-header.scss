@@ -1,0 +1,41 @@
+.chat-main{
+  width: calc(100vw - 300px);
+  float: left;
+  height: 100%;
+  .main-header{
+    height: 99px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eeeeee;
+    &__left-box{
+      margin-top: 35px;
+      h2{
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      ul{
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        li{
+          margin-left: 0.3rem;
+        }
+      }
+    }
+    a{
+      color: $font_color2;
+      text-decoration: none;
+      .main-header__edit-btn{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 28px;
+        border: solid 1px $font_color2;
+        position: absolute;
+        right: 40px;
+      }
+    }
+  }
+}

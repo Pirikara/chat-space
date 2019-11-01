@@ -1,0 +1,28 @@
+.messages{
+  height: calc(100% - 190px);
+  padding: 46px 40px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  .message{
+    padding-bottom: 40px;
+    &__upper-info{
+      display: flex;
+      margin-bottom: 10px;
+      &__name{
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__date{
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    &__text{
+      color: #434a54;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+}

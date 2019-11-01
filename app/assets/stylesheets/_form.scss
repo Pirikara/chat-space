@@ -1,0 +1,46 @@
+.form{
+  height: 90px;
+  padding: 20px 40px;
+  background-color: #ddd;
+  box-sizing: border-box;
+  form{
+    display: flex;
+    .input-box{
+      position: relative;
+      width: calc(100vw - 505px);
+      &__text{
+        height: 50px;
+        width: 100%;
+        color: #434a54;
+        border-style: none;
+        box-sizing: border-box;
+        padding: 0 40px 0 10px;
+      }
+      &__image{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        .fa{
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+        }
+        &__file{
+          display: none;
+        }
+      }
+    }
+    .submit-btn{
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $font_color2;
+      color: $font_color;
+      cursor: pointer;
+    }
+  }
+}

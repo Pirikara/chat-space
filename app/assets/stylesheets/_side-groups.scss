@@ -1,0 +1,20 @@
+.groups{
+  height: calc(100% - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  a{
+    color: $font_color;
+    text-decoration: none;
+    .group{
+      margin-bottom: 40px;
+      .groups__group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .groups__latest-message{
+        font-size: 11px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.flash-box{
+  color: $font_color;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+  background-color: $font_color2;
+  height: 24px;
+}
+
+.wrapper{
+  height: calc(100vh - 24px);
+}
