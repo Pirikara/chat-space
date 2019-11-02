@@ -21,3 +21,8 @@
 @import 'chat-messages';
 @import 'form';
 @import 'templete';
+@import 'modules/user';
+
+// flashメッセージのscssをインポート
+@import 'config/colors';
+@import 'modules/flash';
