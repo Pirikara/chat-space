@@ -1,30 +1,22 @@
 / ユーザー編集ページに遷移するためのパスを追加。
+%div.chat-side
+  %div.side-header
+    %div.side-header__box
+      %p.side-header__box__user-name 
+        = current_user.name
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          = link_to new_group_path do
+            %i.fa.fa-edit
+        %li.side-header__box__menu__edit-user
+          = link_to edit_group_path(current_user) do
+            %i.fa.fa-cog
 
-.side-bar
-  .header
-    %h3.header__name
-      = current_user.name
-    %ul.header__lists
-      %li.list
-        = link_to new_group_path do
-          = fa_icon 'pencil-square-o', class: 'icon'
-      %li.list
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
-  
-  .groups
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+  %div.groups
+    - current_user.groups.each do |group|
+      %div.group
+        = link_to '#'
+        %p.groups__group-name
+          = group.name
+        %p.groups__latest-message
+          メッセージはまだありません。
