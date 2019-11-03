@@ -3,8 +3,8 @@ class GroupsController < ApplicationController
   end
   
   def new
-    #Groupモデルの新しいインスタンスを作成。
-    #現在ログイン中のユーザーを新規作成したグループに追加。
+    #Groupモデルの新しいインスタンスを作成
+    #現在ログイン中のユーザーを新規作成したグループに追加
     @group = Group.new
     @group.users << current_user
   end
