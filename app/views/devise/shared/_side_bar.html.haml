@@ -15,8 +15,8 @@
   %div.groups
     - current_user.groups.each do |group|
       %div.group
-        = link_to '#'
-        %p.groups__group-name
-          = group.name
-        %p.groups__latest-message
-          メッセージはまだありません。
+        = link_to '#' do
+          %p.groups__group-name
+            = group.name
+          %p.groups__latest-message
+            メッセージはまだありません。
