@@ -10,6 +10,9 @@
     .account-page__inner--left, .account-page__inner--right {
       float: left;
       width: 50%;
+      h2{
+        color: black;
+      }
     }
     &:after {
       clear: both;
