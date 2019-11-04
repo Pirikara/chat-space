@@ -13,7 +13,10 @@ class MessagesController < ApplicationController
       redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else
       @messages = @group.messages.include(:user)
+      #groupにひもづくメッセージとそのユーザーを取得。
       flash.now[:alert] = 'メッセージを入力してください'
+      #flashは次のアクションにまで反映させる。
+      #flash.nowは次のアクションに移行した時点で消える。
       render :index
     end
   end
