@@ -2,43 +2,31 @@
 
 %div.wrapper
 
-  = render 'devise/shared/side_bar'
-
+  = render partial: 'partials/left_content'
 
   %div.chat-main
     %div.main-header
       %div.main-header__left-box
-        %h2.main-header__left-box__current-group sample
-        %ul.main-header__left-box__member-list
+        %h2.main-header__left-box__current-group
+          = @group.name
+        %p.main-header__left-box__member-list
           
           Member : 
-          
-          %li.main-header__left-box__member-name
-          seo
-          %li.main-header__left-box__member-name
-          neko
-      =link_to root_path do
+          - @group.users.each do |user|
+            %span.main-header__left-box__member-name
+              = user.name
+
+      = link_to edit_group_path(@group) do
         %div.main-header__edit-btn Edit
 
-    %div.messages
-      %div.message
-        %div.message__upper-info
-          %p.message__upper-info__name seo
-          %p.message__upper-info__date 2019/10/31(Thu) 22:00
-        %p.message__text Hello world!
-      %div.message
-        %div.message__upper-info
-          %p.message__upper-info__name neko
-          %p.message__upper-info__date 2019/10/31(Thu) 22:30
-        %p.message__text Good bye world!
+    .messages
+      = render @messages
 
-    %div.form
-      %form.new-message
-        %div.input-box
-          %input.input-box__text(type="text" placeholder="type a message")
-          %label.input-box__image
-            %i.fa.fa-image
-            %input.input-box__image__file(type="file")
-        %input.submit-btn(type="submit" value="Send")
-
-      
+    .form
+      = form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit-btn'

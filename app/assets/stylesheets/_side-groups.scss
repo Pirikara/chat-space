@@ -3,11 +3,11 @@
   background-color: #2f3e51;
   padding: 20px 20px 0 20px;
   box-sizing: border-box;
-  a{
-    color: $font_color;
-    text-decoration: none;
-    .group{
-      margin-bottom: 40px;
+  .group {
+    margin-bottom: 40px;
+    a{
+      color: $font_color;
+      text-decoration: none;
       .groups__group-name{
         font-size: 15px;
         margin-bottom: 5px;
