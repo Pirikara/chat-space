@@ -1,7 +1,6 @@
 $(document).on('turbolinks:load',function(){
   $(function(){
     function buildHTML(message){
-      let content = message.content? `${message.content}` : "";
       let image = message.image? `<img class='message_image' src=${message.image} >` : "";
       let html = `<div class='message'>
                     <div class='message__upper-info'>
@@ -36,7 +35,7 @@ $(document).on('turbolinks:load',function(){
       .done(function(data){
         let html = buildHTML(data);
         $('.messages').append(html);
-        $('.input-box__text').val('');
+        $('.new_message')[0].reset();
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
       })
       .fail(function(){
