@@ -35,10 +35,11 @@ $(document).on('turbolinks:load',function(){
 
     $("#user-search-field").on('keyup', function() {
       let input = $("#user-search-field").val();
+      let group_id = $('.chat__group_id').val();
       $.ajax({
         type: "GET",
         url: '/users',
-        data: { keyword: input },
+        data: { keyword: input, groupId: group_id },
         dataType: "json"
       })
         .done(function(users) {

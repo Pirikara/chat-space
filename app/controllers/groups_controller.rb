@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
     #現在ログイン中のユーザーを新規作成したグループに追加
     @group = Group.new
     @group.users << current_user
+    @members = @group.users
   end
 
   def create
@@ -21,6 +22,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    @members = @group.users
   end
   
   def update
