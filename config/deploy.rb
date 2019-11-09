@@ -8,7 +8,7 @@ set :default_env, {
   AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
 
-set :application, 'Chat-space'
+set :application, 'chat-space'
 set :repo_url, "git@github.com:Piri-kara/chat-space.git"
 
 # バージョンが変わっても共通で参照するディレクトリを指定
