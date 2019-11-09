@@ -12,9 +12,9 @@ $(document).on('turbolinks:load',function(){
 
     function addNoUser() {
       let html = `
-      <div class="chat-group-user clearfix">
-        <p class="chat-group-user__name">ユーザーが見つかりません</p>
-      </div>
+        <div class="chat-group-user clearfix">
+          <p class="chat-group-user__name">ユーザーが見つかりません</p>
+        </div>
       `;
       $("#user-search-result").append(html);
     }
@@ -35,11 +35,10 @@ $(document).on('turbolinks:load',function(){
 
     $("#user-search-field").on('keyup', function() {
       let input = $("#user-search-field").val();
-      let group_id = $('.chat__group_id').val();
       $.ajax({
         type: "GET",
         url: '/users',
-        data: { keyword: input, groupId: group_id },
+        data: { keyword: input },
         dataType: "json"
       })
         .done(function(users) {
@@ -59,7 +58,7 @@ $(document).on('turbolinks:load',function(){
           alert("通信エラーです。ユーザーが表示できません。");
         });
     });
-    $(document).on("click",".chat-group-user__btn--add", function() {
+    $(document).on("click", ".chat-group-user__btn--add", function() {
       const userName = $(this).attr("data-user-name");
       const userId = $(this).attr("data-user-id");
       $(this)
